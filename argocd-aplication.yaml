@@ -7,7 +7,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://github.com/Ljovel/argo-deployd
+    repoURL: https://github.com/Ljovel/v1.git
     targetRevision: HEAD
     path: dev
   destination: 
