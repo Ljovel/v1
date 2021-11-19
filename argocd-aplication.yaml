@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: appDeployd
+  name: appdeployd
   namespace: argocd
 spec:
   project: default
