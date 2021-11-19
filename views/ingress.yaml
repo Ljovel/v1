@@ -1,18 +1,15 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: my-ingress
-  namespace: appdeployd
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$1
 spec:
   rules:
-    - http:
-        paths:
-          - path: /*
-            pathType: Prefix
-            backend:
-              service:
-                name: ps-nodeport
-                port:
-                  number: 9090
+  - http:
+      paths:
+      - path: /*
+        pathType: ImplementationSpecific
+        backend:
+          service:
+            name: myapp-service
+            port:
+              number: 80
