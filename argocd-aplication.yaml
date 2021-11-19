@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/Ljovel/v1.git
     targetRevision: HEAD
-    path: v1
+    path: views
   destination: 
     server: https://kubernetes.default.svc
     namespace: appDeployd
