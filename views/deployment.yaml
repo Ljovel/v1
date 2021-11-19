@@ -2,21 +2,23 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: appdeployd
+  labels:
+    app: web
 spec:
+  replicas: 6
   selector:
     matchLabels:
-      app: appdeployd
-  replicas: 6
+      app: web
   template:
     metadata:
       labels:
-        app: appdeployd
+        app: web
     spec:
       containers:
       - name: appdeployd
-        image: 19930501/deployd-k8s:1.1
+        image: 19930501/deployd-k8s:1.0
         ports:
-        - containerPort: 9090
+        - containerPort: 8080
         resources:
           requests:
             memory: 30Mi
