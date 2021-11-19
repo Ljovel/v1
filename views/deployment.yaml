@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: appDeployd
+  name: appdeployd
 spec:
   selector:
     matchLabels:
-      app: appDeployd
+      app: appdeployd
   replicas: 2
   template:
     metadata:
       labels:
-        app: appDeployd
+        app: appdeployd
     spec:
       containers:
-      - name: appDeployd
+      - name: appdeployd
         image: 19930501/deployd-k8s:1.0
         ports:
         - containerPort: 8080
